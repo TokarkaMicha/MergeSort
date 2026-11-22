@@ -1,20 +1,35 @@
 #ifndef MERGESORT_H
 #define MERGESORT_H
-
+/**
+ * @file MergeSort.h
+ * @brief Implementacja szablonu klasy sortowania przez scalanie (MergeSort).
+ */
 #include <vector>
 
-// Definiujemy szablon klasy, T oznacza jakikolwiek typ (np. int, double)
+/**
+ * @class MergeSort
+ * @brief Szablon klasy realizującej algorytm sortowania przez scalanie.
+ * @tparam T Typ danych przechowywanych w sortowanym wektorze (np. int, double).
+ */
 template <typename T>
 class MergeSort {
 public:
-    // Główna funkcja do wywoływania sortowania
+    /**
+ * @brief Główna metoda sortująca wektor rosnąco.
+ * @param arr Referencja do wektora, który ma zostać posortowany.
+ */
     static void sort(std::vector<T>& arr) {
         if (arr.size() <= 1) return;
         mergeSortRecursive(arr, 0, arr.size() - 1);
     }
 
 private:
-    // Rekurencyjne dzielenie tablicy na pół
+    /**
+ * @brief Rekurencyjnie dzieli tablicę na dwie połowy i wywołuje ich scalanie.
+ * @param arr Referencja do sortowanego wektora.
+ * @param left Indeks lewego krańca podtablicy.
+ * @param right Indeks prawego krańca podtablicy.
+ */
     static void mergeSortRecursive(std::vector<T>& arr, int left, int right) {
         if (left >= right) return;
         int mid = left + (right - left) / 2;
@@ -25,7 +40,13 @@ private:
         merge(arr, left, mid, right);
     }
 
-    // Scalanie (Merge) dwóch posortowanych połówek
+    /**
+ * @brief Scala dwie posortowane podtablice w jedną posortowaną całość.
+ * @param arr Referencja do sortowanego wektora.
+ * @param left Indeks początku lewej podtablicy.
+ * @param mid Indeks środka dzielącego podtablice.
+ * @param right Indeks końca prawej podtablicy.
+ */
     static void merge(std::vector<T>& arr, int left, int mid, int right) {
         int n1 = mid - left + 1;
         int n2 = right - mid;

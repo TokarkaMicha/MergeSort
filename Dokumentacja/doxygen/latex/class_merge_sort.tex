@@ -1,0 +1,103 @@
+\doxysection{Merge\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_merge_sort}{}\label{class_merge_sort}\index{MergeSort$<$ T $>$@{MergeSort$<$ T $>$}}
+
+
+Szablon klasy realizującej algorytm sortowania przez scalanie.  
+
+
+
+
+{\ttfamily \+\#include $<$Merge\+Sort.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_merge_sort_a0cc3836829698a409f989019b58a7f15}{sort}} (std::\+vector$<$ T $>$ \&arr)
+\begin{DoxyCompactList}\small\item\em Główna metoda sortująca wektor rosnąco. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_merge_sort_a121cbe5863b1fba00ed1e79029770d03}{merge\+Sort\+Recursive}} (std::\+vector$<$ T $>$ \&arr, int left, int right)
+\begin{DoxyCompactList}\small\item\em Rekurencyjnie dzieli tablicę na dwie połowy i wywołuje ich scalanie. \end{DoxyCompactList}\item 
+static void \doxymbox{\hyperlink{class_merge_sort_ac522f11b3bb6b59d989cc756bbb1ed1c}{merge}} (std::\+vector$<$ T $>$ \&arr, int left, int mid, int right)
+\begin{DoxyCompactList}\small\item\em Scala dwie posortowane podtablice w jedną posortowaną całość. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Merge\+Sort$<$ T $>$}
+Szablon klasy realizującej algorytm sortowania przez scalanie. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Typ danych przechowywanych w sortowanym wektorze (np. int, double). \\
+\hline
+\end{DoxyTemplParams}
+
+
+\label{class_merge_sort_doc-func-members}
+\Hypertarget{class_merge_sort_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_merge_sort_ac522f11b3bb6b59d989cc756bbb1ed1c}\index{MergeSort$<$ T $>$@{MergeSort$<$ T $>$}!merge@{merge}}
+\index{merge@{merge}!MergeSort$<$ T $>$@{MergeSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily \label{class_merge_sort_ac522f11b3bb6b59d989cc756bbb1ed1c} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{class_merge_sort}{Merge\+Sort}}$<$ T $>$::\+merge (\begin{DoxyParamCaption}\item[{std::\+vector$<$ T $>$ \&}]{arr}{, }\item[{int}]{left}{, }\item[{int}]{mid}{, }\item[{int}]{right}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Scala dwie posortowane podtablice w jedną posortowaną całość. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Referencja do sortowanego wektora. \\
+\hline
+{\em left} & Indeks początku lewej podtablicy. \\
+\hline
+{\em mid} & Indeks środka dzielącego podtablice. \\
+\hline
+{\em right} & Indeks końca prawej podtablicy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_merge_sort_a121cbe5863b1fba00ed1e79029770d03}\index{MergeSort$<$ T $>$@{MergeSort$<$ T $>$}!mergeSortRecursive@{mergeSortRecursive}}
+\index{mergeSortRecursive@{mergeSortRecursive}!MergeSort$<$ T $>$@{MergeSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mergeSortRecursive()}{mergeSortRecursive()}}
+{\footnotesize\ttfamily \label{class_merge_sort_a121cbe5863b1fba00ed1e79029770d03} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{class_merge_sort}{Merge\+Sort}}$<$ T $>$::\+merge\+Sort\+Recursive (\begin{DoxyParamCaption}\item[{std::\+vector$<$ T $>$ \&}]{arr}{, }\item[{int}]{left}{, }\item[{int}]{right}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Rekurencyjnie dzieli tablicę na dwie połowy i wywołuje ich scalanie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Referencja do sortowanego wektora. \\
+\hline
+{\em left} & Indeks lewego krańca podtablicy. \\
+\hline
+{\em right} & Indeks prawego krańca podtablicy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_merge_sort_a0cc3836829698a409f989019b58a7f15}\index{MergeSort$<$ T $>$@{MergeSort$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!MergeSort$<$ T $>$@{MergeSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily \label{class_merge_sort_a0cc3836829698a409f989019b58a7f15} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{class_merge_sort}{Merge\+Sort}}$<$ T $>$::\+sort (\begin{DoxyParamCaption}\item[{std::\+vector$<$ T $>$ \&}]{arr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Główna metoda sortująca wektor rosnąco. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Referencja do wektora, który ma zostać posortowany. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Program/\doxymbox{\hyperlink{_merge_sort_8h}{Merge\+Sort.\+h}}\end{DoxyCompactItemize}
